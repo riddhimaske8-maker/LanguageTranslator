@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Language Translator</h1>
+      <form id="translator-form">
+        <label for="text-input">Text to translate</label>
+        <textarea id="text-input" rows="6" placeholder="Enter text here..."></textarea>
+
+        <label for="target">Target languages</label>
+        <select id="target" name="target">
+          <option value="">Select a languages</option>
+          <option value="en">English</option>
+          <option value="tr">Turkish</option>
+        <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="es">Spanish</option>
+          <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="zh-CN">Chinese</option>
+        </select>
+
+        <button type="submit">Translate</button>
+      </form>
+
+      <div id="result" class="result hidden">
+        <h2>Translated Text</h2>
+        <p id="translated-text"></p>
+        <label for="output">Output</label>
+        <textarea id="output" readonly rows="6"></textarea>
+        <button type="button" onclick="copyText()">Copy</button>
+        <button type="button" onclick="speaktext()">Speak</button>
+        <button type="button" onclick="darkmode()">DarkMode</button>
+        <button type="button" onclick="cleartext()">Clear</button>
+        <button type="button" onclick="swap()">Swap</button>
+      </div>
+      <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

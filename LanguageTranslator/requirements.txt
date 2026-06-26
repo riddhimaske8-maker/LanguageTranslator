@@ -1,0 +1,3 @@
+Flask>=2.3.0
+deep-translator>=1.10.0
+
